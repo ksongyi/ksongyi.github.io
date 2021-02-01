@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="js/button.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="memberlist">
+        <fieldset>
+            <legend>List</legend>
+                <table id="guestBook"></table>
+        </fieldset>
+
+    </div>
+
+    <div class="main">
+        <form action="" method="GET" class="login">
+            <fieldset id="loginfield"> 
+                <legend>Login</legend>
+                <table id="lgtb">
+                    <tr>
+                        <td>ID</td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <input 
+                                type="text" 
+                                name="id" 
+                                id="id" 
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PASSWORD</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="password"
+                                name="userpassword"
+                                id="userpassword"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                class="btn"
+                                type="submit" 
+                                value="LOGIN" 
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button 
+                                class="btn"
+                                type="button" 
+                                onclick="loginbtn2()" 
+                            > JOIN</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    
+        
+        
+        <form action="javascript:saveGuestBook();" class="join">
+            
+            <fieldset id="joinfield"> 
+                <legend >Join</legend>
+                 <table id="jotb">
+                    <tr>
+                        <td> <label for="userId">ID</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="text"
+                                name="userId"
+                                id="userId"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">PASSWORD</label> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="password"
+                                name="pwd"
+                                id="pwd"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ckpwd">PASSWORD CONFIRM</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="password"
+                                name="ckpwd"
+                                id="ckpwd"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="userName">NAME</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="text"
+                                name="userName"
+                                id="userName"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="userTel">PHONE</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="tel"
+                                name="userTel"
+                                id="userTel"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="userEmail">EMAIL</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="email"
+                                name="userEmail"
+                                id="userEmail"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                id="btn"
+                                class="btn"
+                                type="submit" 
+                                value="JOIN" 
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button 
+                                type="button" 
+                                onclick="loginbtn3()" 
+                                class="btn"
+                            > LOGIN </button>
+                        </td>
+                    </tr>
+                </table>   
+            </fieldset>
+        </form>
+    
+        <div class="button">
+            <a id="return" href="http://127.0.0.1:5500/introduce.html" target="_self"><img src="images/iconfinder_left-arrow-back_2931162.png"> </a>
+            <a id="next" href="http://127.0.0.1:5500/roadmap.html" target="_self"><img src="images/iconfinder_right-forward-arrow_2931159.png"> </a>
+        </div>
+        
+        <hr id="pageline">
+    </div>
+    
+    <div class="page">
+        <button id="page" onmouseover="pagebtn()" onmouseout="pagebtn1()" >login page</button>
+        <table id="list" onmouseover="pagebtn()" onmouseout="pagebtn1()">
+            <tr>
+                <td>
+                    <a href="http://127.0.0.1:5500/index.html">index</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://127.0.0.1:5500/introduce.html">introduce</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://127.0.0.1:5500/roadmap.html">roadmap</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://127.0.0.1:5500/picture.html">picture</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+
+        ckpwd.onblur = function(){
+            if(userId.value.length < 4){
+            alert("아이디는 4글자 이상 사용이 가능합니다.");
+            userId.select();
+            return false;
+            }
+
+            if(pwd.value.length < 4){
+            alert("비밀번호는 4글자 이상입력해주세요.");
+            pwd.select();
+            return false;
+            }
+            
+            if(pwd.value != ckpwd.value){
+            alert("비밀번호가 일치하지 않습니다.");
+            pwd.value = '';
+            ckpwd.value = '';
+            pwd.focus();
+            }
+            
+            return true;
+        };
+
+        function saveGuestBook(){
+            var guestBook = new GuestBook(
+                                        $(userId).val(), $(pwd).val(), 
+                                        $(ckpwd).val(), $(userName).val(),
+                                        $(userTel).val(), $(userEmail).val());
+
+
+            var arr = JSON.parse(localStorage.getItem("arr"));
+            if(arr == null) arr = [];
+            arr.push(guestBook);
+
+   
+            var jsonStr = JSON.stringify(arr);
+            localStorage.setItem("arr", jsonStr);
+
+  
+            $(userId).val('').focus();
+            $(pwd).val('');
+            $(ckpwd).val('');
+            $(userName).val('');
+            $(userTel).val('');
+            $(userEmail).val('');
+
+            loadGuestBook();
+        }
+
+        function GuestBook(id, pwd, ckpwd, name, tel, email){
+            this.id = id;
+            this.pwd = pwd;
+            this.ckpwd = ckpwd;
+            this.name = name;
+            this.tel = tel;
+            this.email = email;
+            this.time = new Date().getTime();
+        }
+
+        $(function(){
+            loadGuestBook();
+        });
+
+
+        function loadGuestBook(){
+            var arr = JSON.parse(localStorage.getItem("arr"));
+            var $guestBook = $(guestBook);
+            console.log(arr);
+
+            $guestBook.html("<tr><th>No</th><th>아이디</th><th>이름</th><th>방문일시</th></tr>");
+
+            if(arr == null){
+            $guestBook.append("<tr><td colspan='4'>방문자가 없습니다.</td></tr>");
+            }
+            else {
+
+            $.each(arr, function(index, elem){
+                console.log(index, elem);
+                var date = new Date(elem.time);
+                var tr = "<tr>";
+                tr += "<td>" + (index + 1) + "</td>";
+                tr += "<td>" + elem.id + "</td>";
+                tr += "<td>" + elem.name + "</td>";
+                tr += "<td>" + displayTime(date) + "</td>";
+                tr += "</tr>";
+                console.log(tr);
+                $guestBook.append(tr);
+            });
+            }
+
+        }
+
+
+        function displayTime(date){
+            return date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() 
+                + " " + date.getHours() + ":" + date.getMinutes();
+
+        }
+
+
+   
+    </script> 
+    
+ 
+
+    
+</body>
+</html>

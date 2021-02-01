@@ -1,0 +1,327 @@
+body {
+    margin: 0px;
+}
+.main {
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background-image: url(images/20170731_160934.jpg);
+    background-color: rgb(4, 32, 9);
+    font-family: 'Bodoni Moda', serif;
+}
+.button {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 10;
+    display: contents;
+}
+.button:hover {
+    opacity: 1;
+}
+#return {
+    float: left;
+    margin-top: 350px;  
+}
+ #next {
+    float: right;
+    margin-top: 350px;
+    margin-left: 890px; 
+}  
+
+#pageline {
+    margin-top: 737px;
+    margin-left: 774px;
+    display: inline-block;
+    border: solid 1px rgba(165, 187, 69, 0.712);
+    opacity: 0.7;
+    position: absolute;
+}
+
+#page {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 40px;
+    font-family: 'Bodoni Moda', serif;
+    margin-left: 747px;
+    margin-top: 710px;
+    z-index: 50;
+    width: 283px;
+    opacity: 0.9;
+    color:rgba(188, 190, 70, 0.76);
+}
+#list {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 150px;
+    float: right;
+    margin-top: 560px;
+    margin-left: 850px;
+    z-index: 500;
+    visibility: hidden;
+}
+table a {
+    text-decoration: none;
+    font-weight: bold;
+    color:rgba(212, 210, 98, 0.842);
+    font-family: none;
+}
+
+
+
+
+.frame {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 110px;
+}
+.picture img {
+    width: 180px;
+    position: absolute;
+}
+.picture {
+    width: 820px;
+    height: 600px;
+    position: absolute;
+}
+
+#img1 {
+    animation: mypicture1;
+    animation-duration: 3s;
+}
+ @keyframes mypicture1 {
+    25% {
+        transform: translate(0px, 135px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(68px, 50px);
+        z-index: 5;
+    }
+} 
+#img2 {
+    animation: mypicture2;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+ @keyframes mypicture2 {
+    25% {
+        transform: translate(0px, 135px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(23px, 50px);
+        z-index: 5;
+    }
+} 
+#img3 {
+    animation: mypicture3;
+    animation-duration: 3s;
+    animation-delay: 6s;
+}
+ @keyframes mypicture3 {
+    25% {
+        transform: translate(0px, 135px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-23px, 50px);
+        z-index: 5;
+    }
+} 
+#img4 {
+    animation: mypicture4;
+    animation-duration: 3s;
+    animation-delay: 9s;
+}
+ @keyframes mypicture4 {
+    25% {
+        transform: translate(0px, 135px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-67px, 50px);
+        z-index: 5;
+    }
+} 
+#img5 {
+    animation: mypicture5;
+    animation-duration: 3s;
+    animation-delay: 12s;
+}
+ @keyframes mypicture5 {
+    25% {
+        transform: translate(200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(68px, 17px);
+        z-index: 5;
+    }
+} 
+#img6 {
+    animation: mypicture6;
+    animation-duration: 3s;
+    animation-delay: 15s;
+}
+ @keyframes mypicture6 {
+    25% {
+        transform: translate(100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(23px, 17px);
+        z-index: 5;
+    }
+} 
+#img7 {
+    animation: mypicture7;
+    animation-duration: 3s;
+    animation-delay: 18s;
+}
+ @keyframes mypicture7 {
+    25% {
+        transform: translate(-100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-23px, 17px);
+        z-index: 5;
+    }
+} 
+#img8 {
+    animation: mypicture8;
+    animation-duration: 3s;
+    animation-delay: 21s;
+}
+ @keyframes mypicture8 {
+    25% {
+        transform: translate(-200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-69px, 17px);
+        z-index: 5;
+    }
+} 
+#img9 {
+    animation: mypicture9;
+    animation-duration: 3s;
+    animation-delay: 24s;
+}
+ @keyframes mypicture9 {
+    25% {
+        transform: translate(200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(69px, -17px);
+        z-index: 5;
+    }
+} 
+#img10 {
+    animation: mypicture10;
+    animation-duration: 3s;
+    animation-delay: 27s;
+}
+ @keyframes mypicture10 {
+    25% {
+        transform: translate(100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(23px, -17px);
+        z-index: 5;
+    }
+} 
+#img11 {
+    animation: mypicture11;
+    animation-duration: 3s;
+    animation-delay: 30s;
+}
+ @keyframes mypicture11 {
+    25% {
+        transform: translate(-100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-23px, -17px);
+        z-index: 5;
+    }
+} 
+#img12 {
+    animation: mypicture12;
+    animation-duration: 3s;
+    animation-delay: 33s;
+}
+ @keyframes mypicture12 {
+    25% {
+        transform: translate(-200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-69px, -17px);
+        z-index: 5;
+    }
+} 
+#img13 {
+    animation: mypicture13;
+    animation-duration: 3s;
+    animation-delay: 36s;
+}
+ @keyframes mypicture13 {
+    25% {
+        transform: translate(200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(69px, -50px);
+        z-index: 5;
+    }
+} 
+#img14 {
+    animation: mypicture14;
+    animation-duration: 3s;
+    animation-delay: 39s;
+}
+ @keyframes mypicture14 {
+    25% {
+        transform: translate(100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(23px, -50px);
+        z-index: 5;
+    }
+} 
+#img15 {
+    animation: mypicture15;
+    animation-duration: 3s;
+    animation-delay: 42s;
+}
+ @keyframes mypicture15 {
+    25% {
+        transform: translate(-100px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-23px, -50px);
+        z-index: 5;
+    }
+} 
+#img16 {
+    animation: mypicture16;
+    animation-duration: 3s;
+    animation-delay: 45s;
+}
+ @keyframes mypicture16 {
+    25% {
+        transform: translate(-200px, 0px);
+        z-index: 5;
+    }
+    100% {
+        transform: scale(4.5) translate(-69px, -50px);
+        z-index: 5;
+    }
+} 
